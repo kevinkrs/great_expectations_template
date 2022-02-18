@@ -1,0 +1,42 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "transaction_validation_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "article_id",
+        "value_set": [
+          "100L",
+          "200XL",
+          "300M",
+          "400S",
+          "500M"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "The input value set is derived from the articles.csv. This way the validation data will always be compared \n         to the currently available articles. Optionally another suite for checking articles may be beneficial"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "value"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "article_id"
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.14.6"
+  }
+}
